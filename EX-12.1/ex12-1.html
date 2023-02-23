@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EX 12.1</title>
+</head>
+<body>
+  
+  <div id="output">Complete JavaScript Course</div>
+  Search for:
+  <input id="sText" type="text">
+  <br> Replace with:
+  <input id="rText" type="text">
+  <br>
+  <button>Replace</button>
+  <script>
+
+
+        ////////////////////// REGEX
+
+    const output = document.getElementById("output")
+    const findvalue = document.getElementById("sText")
+    const replacevalue = document.getElementById("rText")
+    document.querySelector("button").addEventListener("click",lookup)
+
+    function lookup() {
+      console.log(findvalue.value);
+      console.log(replacevalue.value);
+      let s = output.textContent;
+      let rt = replacevalue.value;
+      let re = new RegExp(findvalue.value);
+      if (s.match(re)) {
+        let newvalue = s.replace(re,rt);
+        output.textContent = newvalue;
+      }
+    }
+
+  </script>
+
+</body>
+</html>

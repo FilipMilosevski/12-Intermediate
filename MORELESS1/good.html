@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .demo {
+      display: none;
+    }
+  </style>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+      ipsam quis perspiciatis, provident quos quisquam
+      <span id="p1"
+        >recusandae eaque inventore ab optio dolore excepturi debitis! Debitis
+        possimus soluta molestias alias veritatis velit!</span
+      >
+    </p>
+    <button class="More">..Show More</button>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+      ipsam quis perspiciatis, provident quos quisquam
+      <span id="p1"
+        >recusandae eaque inventore ab optio dolore excepturi debitis! Debitis
+        possimus soluta molestias alias veritatis velit!</span
+      >
+    </p>
+    <button class="More">..Show More</button>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+      ipsam quis perspiciatis, provident quos quisquam
+      <span id="p1"
+        >recusandae eaque inventore ab optio dolore excepturi debitis! Debitis
+        possimus soluta molestias alias veritatis velit!</span
+      >
+    </p>
+    <button class="More">..Show More</button>
+    <script></script>
+  </body>
+</html>
+<script>
+let span = document.querySelectorAll("#p1");
+let btn = document.querySelectorAll(".More");
+for (let i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", function () {
+    span[i].classList.toggle("demo");
+  });
+}
+</script>
+
+
+
+

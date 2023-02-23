@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON 1</title>
+</head>
+<body>
+  
+
+
+
+
+  <script>
+    let jobj = [
+    {
+        "name": "Learn JavaScript",
+        "status": true
+    },
+    {
+        "name": "Learn Java",
+        "status": false
+    },
+    {
+        "name": "Learn JavaScript",
+        "status": true
+    }
+    ]
+
+      // jobj.forEach(el=> console.log(el.name))
+
+
+      jobj.forEach(el=> console.log(   el.name))
+      console.log(typeof JSON.stringify(jobj));
+
+
+  </script>
+</body>
+</html>

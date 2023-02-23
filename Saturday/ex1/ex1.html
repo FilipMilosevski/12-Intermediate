@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E X 1</title>
+</head>
+<body>
+  
+<p id="demo"></p>
+
+
+<script>
+
+class Rook {
+  constructor(color,icon,player) {
+    this.color = color;
+    this.icon = icon;
+    this.player = player;
+  }
+}
+const rook = new Rook ({color:"black",icon:"rook",player:2});
+const serializeObject = (obj) => {
+  return JSON.parse(JSON.stringify(rook));
+};
+const deserializeObject = (obj) => {
+  return new Rook(obj)
+}
+console.log("original object:",rook);
+const serializeObj = serializeObject(rook);
+console.log("serialized object:",serializeObj);
+const  deserializeObj = deserializeObject(serializeObj)
+console.log("deserialized object:",deserializeObj);
+
+let myObject = {
+  name:"John Doe",
+  age:15,
+  email:"test@test.com",
+  job:"Auditor",
+};
+
+
+console.log(myObject);
+
+let converted = JSON.stringify(myObject)
+console.log(converted);
+
+
+const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}')
+document.getElementById("demo").innerText += `Name: ${obj.name} Age: ${obj.age} City:${obj.city}`;
+
+
+fetch("example.json")
+.then((response) =>response.json())
+.then((json) => console.log(json))
+
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+.then((response) =>response.json())
+.catch((error)=>"Something some bad has happend")
+.then((json) => console.log(json))
+
+</script>
+
+</body>
+</html>

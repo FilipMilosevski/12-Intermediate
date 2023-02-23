@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <span class="p1">
+    Breaking India: Western Interventions in Dravidian and Dalit Faultlines is
+    a book written by Rajiv Malhotra and Aravindan Neelakandan which argues
+    that India's integrity is being undermined
+  </span>
+  <button class="More">..Show More</button>
+  <span class="p1">
+    I hate yogurt. It's just stuff with bits in. You hit me with a cricket
+    bat. All I've got to do is pass as an ordinary human being. Simple. What
+    could possibly go wrong? I'm the Doctor, I'm worse than everyone's aunt.
+    *catches himself* And that is not how I'm introducing myself. All I've got
+    to do is pass as an ordinary human being. Simple. What could possibly go
+    wrong? The way I see it, every life is a pile of good things and bad
+    things.…hey.…the good things don't always soften the bad things; but
+    vice-versa the bad things don't necessarily spoil the good things and make
+    them unimportant.
+  </span>
+  <button class="More">..Show More</button>
+  <span class="p1">
+    Saving the world with meals on wheels. Saving the world with meals on
+    wheels. It's art! A statement on modern society, 'Oh Ain't Modern Society
+    Awful?'! I'm nobody's taxi service; I'm not gonna be there to catch you
+    every time you feel like jumping out of a spaceship. You hit me with a
+    cricket bat. You've swallowed a planet! You know how I sometimes have
+    really brilliant ideas? Heh-haa! Super squeaky bum time! Aw, you're all
+    Mr. Grumpy Face today.
+  </span>
+  <button class="More">..Show More</button>
+  <span class="p1">
+    Aw, you're all Mr. Grumpy Face today. I am the last of my species, and I
+    know how that weighs on the heart so don't lie to me! All I've got to do
+    is pass as an ordinary human being. Simple. What could possibly go wrong?
+    You hit me with a cricket bat. No, I'll fix it. I'm good at fixing rot.
+    Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister.
+    Stop talking, brain thinking. Hush. I am the last of my species, and I
+    know how that weighs on the heart so don't lie to me!
+  </span>
+  <button class="More">..Show More</button>
+<script>
+document.querySelectorAll("button.More").forEach((bttn) => {
+bttn.dataset.state = 0;
+bttn.addEventListener("click", function (e) {
+  let span = this.previousElementSibling;
+  span.dataset.tmp = span.textContent;
+  span.textContent = span.dataset.content;
+  span.dataset.content = span.dataset.tmp;
+  this.innerHTML = this.dataset.state == 1 ? "Show More..." : "Show Less...";
+  this.dataset.state = 1 - this.dataset.state;
+});
+});
+document.querySelectorAll("span.p1").forEach((span) => {
+span.dataset.content = span.textContent;
+span.textContent = span.textContent.substr(0, 100) + "...";
+});
+</script>
+</body>
+</html>
